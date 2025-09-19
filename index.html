@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мини-игра: Сортировка товаров</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="bg"></div>
+  <div id="container">
+    <div id="game"></div>
+    <div id="progress-container">
+      <div id="progress-bar">
+        <div id="progress-fill"></div>
+        <img id="progress-asset" src="delivery-bag.png" alt="Progress">
+      </div>
+    </div>
+    <div id="win" style="display:none;">
+      <canvas id="win-canvas"></canvas>
+      <div id="win-content">
+        <h2>Победа!</h2>
+        <button onclick="initGame()">Сыграть ещё раз</button>
+        <button onclick="hidePromoOverlay()" style="margin-left: 10px;">Скрыть</button>
+      </div>
+    </div>
+  </div>
+  <div id="promo-overlay">
+    <div id="promo-content">
+      <img id="promo-box1-asset" src="box1.png" alt="Falling Box" style="display: none;">
+      <img id="promo-box-asset" src="box.png" alt="Promo Box" style="display: none;">
+      <button id="promo-button" onclick="claimPromo()">Получить приз</button>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
